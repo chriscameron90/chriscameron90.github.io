@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>{{title}}</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <h1 class="heading-l">{{title}}</h1>
+  <nav>
+    {% include './partials/nav.njk' %}
+  </nav>
+  <main class="content">
+    {% block content %}{% endblock content %}
+  </main>
+</body>
+</html>
