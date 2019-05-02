@@ -2,11 +2,11 @@
 # Spiderworks options
 #-----------------------------------------------------------------------------------------------------------------------
 
-#directories:
+directories:
 #    templates: 'templates'
 #    static: 'static'
 #    pages: 'pages'
-#    output: 'dist'
+    output: 'public'
 
 # Options for the `marked` Markdown parser
 #marked:
