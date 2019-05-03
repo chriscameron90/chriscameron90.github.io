@@ -1,2 +1,0 @@
-# Christopher Cameron
-## Interaction designer
