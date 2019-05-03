@@ -1,3 +1,4 @@
-  name: Christopher Cameron, Interaction Designer
-	markdown: kramdown
-  theme: jekyll-theme-minimal
+name: Christopher Cameron, Interaction Designer
+markdown: kramdown
+theme: jekyll-theme-minimal
+permalink: /blog/:year/:month/:day/:title
