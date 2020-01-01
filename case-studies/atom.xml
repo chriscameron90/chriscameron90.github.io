@@ -4,14 +4,14 @@ layout: feed
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-	<title>Christopher Cameron's Blog</title>
-	<link href="http://chriscameron90.github.io/blog/atom.xml" rel="self"/>
-	<link href="http://chriscameron90.github.io/blog"/>
+	<title>Christopher Cameron's case studies</title>
+	<link href="http://chriscameron90.github.io/case-studies/atom.xml" rel="self"/>
+	<link href="http://chriscameron90.github.io/case-studies"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://chriscameron90.github.io/blog</id>
+	<id>http://chriscameron90.github.io/case-studies</id>
 	<author>
 		<name>Christopher Cameron</name>
-		<email>crcameron90@gmail.com</email>
+		<email>hello@christophercameron.co.uk</email>
 	</author>
 
 	{% for post in site.posts %}

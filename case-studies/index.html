@@ -1,0 +1,19 @@
+---
+layout: default
+title: Case studies
+---
+<div class="app-grid-row">
+	<div class="app-grid-column-two-thirds">
+		<h1 class="app-heading--l">{{ page.title }}</h1>
+		<ul class="app-list app-list__posts">
+			{% for post in site.posts %}
+			<li>
+				<a class="app-post__link" href="{{ post.url }}" title="{{ post.title }}">
+					<span class="app-list__post-title">{{ post.title }}</span>
+					<span class="app-list__post-desc">{{ post.description }}</span>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

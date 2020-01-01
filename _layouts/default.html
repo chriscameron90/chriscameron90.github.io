@@ -2,27 +2,34 @@
 <html>
 	<head>
 		<title>{{ page.title }}</title>
-		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/reset.css">
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap" rel="stylesheet"> 
 	</head>
 
 	<body>
-		<nav>
-			<ul>
-				<li><a href="/">Christopher Cameron</a></li>
-				<li><a href="/blog">Blog</a></li>
-			</ul>
-		</nav>
-		<div class="container">
-
-			{{ content }}
-
+		<header class="app-header">
+			<div class="app-header__container app-width-container">
+				<a class="app-header__link app-header__link--homepage" href="/">Christopher Cameron</a>
+				<nav>
+					<ul id="navigation" class="app-header__navigation" aria-label="Top Level Navigation">
+						<li class="app-header__navigation-item"><a class="app-link" href="/case-studies">Case studies</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="app-width-container">
+			<main class="app-main-wrapper app-main-wrapper" id="main-content" role="main">
+				{{ content }}
+		  </main>
 		</div><!-- /.container -->
-		<footer>
-			<ul>
-				<li><a href="mailto:crcameron90@gmail.com">email</a></li>
-				<li><a href="https://github.com/chriscameron90">github.com/chriscameron90</a></li>
-			</ul>
+		<footer class="app-footer" role="contactinfo">
+			<div class="app-width-container">
+				<ul class="app-list app-list__inline">
+					<li><a class="app-link app-link--footer" href="mailto:hello@christophercameron.co.uk">Email me</a></li>
+				</ul>
+			</div>
 		</footer>
 	</body>
 </html>

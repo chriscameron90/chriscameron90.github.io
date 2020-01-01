@@ -1,25 +1,494 @@
+html {
+  background-color: #fff;
+}
+
 body {
-  margin: 60px auto;
-  width: 70%;
+  margin: 0;
+  background-color: #fff;
 }
 
-nav ul, footer ul {
-  font-family: 'Arial', 'Sans-Serif';
-  padding: 0px;
-  list-style: none;
-  font-weight: bold;
+/* Grid system 'borrowed' from GOV.UK */
+.app-grid-row {
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
-nav ul li, footer ul li {
-  display: inline;
-  margin-right: 20px;
+.app-grid-row:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
-ul.posts {
-  margin: 40px 0 20px;
-  font-size: 1.5em;
+.app-grid-column-one-quarter {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
 }
 
-ul.posts li {
-  list-style: none;
+@media (min-width: 40.0625em) {
+  .app-grid-column-one-quarter {
+    width: 25%;
+    float: left;
+  }
+}
+
+.app-grid-column-one-third {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+}
+@media (min-width: 40.0625em) {
+  .app-grid-column-one-third {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+.app-grid-column-one-half {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+}
+@media (min-width: 40.0625em) {
+  .app-grid-column-one-half {
+    width: 50%;
+    float: left;
+  }
+}
+
+.app-grid-column-two-thirds {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+}
+
+@media (min-width: 40.0625em) {
+  .app-grid-column-two-thirds {
+    width: 66.6666%;
+    float: left;
+  }
+}
+
+.app-grid-column-three-quarters {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+}
+
+@media (min-width: 40.0625em) {
+  .app-grid-column-three-quarters {
+    width: 75%;
+    float: left;
+  }
+}
+
+.app-grid-column-full {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+}
+
+@media (min-width: 40.0625em) {
+  .app-grid-column-full {
+    width: 100%;
+    float: left;
+  }
+}
+
+.app-main-wrapper {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 45px;
+}
+
+@media (min-width: 40.0625em) {
+  .app-main-wrapper {
+    padding-top: 40px;
+    padding-bottom: 75px;
+  }
+}
+
+.app-width-container {
+  max-width: 800px;
+  margin: 0 15px;
+}
+
+@supports (margin: max(calc(0px))) {
+  .app-width-container {
+    margin-right: max(15px, calc(15px + env(safe-area-inset-right)));
+    margin-left: max(15px, calc(15px + env(safe-area-inset-left)));
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .app-width-container {
+    margin: 0 30px;
+  }
+
+  @supports (margin: max(calc(0px))) {
+    .app-width-container {
+      margin-right: max(30px, calc(15px + env(safe-area-inset-right)));
+      margin-left: max(30px, calc(15px + env(safe-area-inset-left)));
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .app-width-container {
+    margin: 0 auto;
+  }
+
+  @supports (margin: max(calc(0px))) {
+    .app-width-container {
+      margin: 0 auto;
+    }
+  }
+}
+
+/* Header styles 'borrowed' from GOV.UK */
+.app-header {
+  background: #fff;
+  border-bottom: 10px solid #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.14286;
+  padding-top: 3px;
+}
+
+@media (min-width: 40.0625em) {
+  .app-header {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .app-header {
+    font-family: sans-serif;
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
+.app-header__container {
+  position: relative;
+  margin-bottom: -10px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-bottom: 10px solid #ED6F1A;
+}
+
+.app-header__container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Header links */
+.app-header__link {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.app-header__link:focus {
+  background-color: #FF8636;
+  color: #0b0c0c;
+  outline: 3px solid #FF8636;
+  outline-offset: 0;
+}
+
+.app-header__link:link,
+.app-header__link:visited {
+  color: #0b0c0c;
+}
+
+.app-header__link:hover {
+  text-decoration: underline;
+}
+
+/* Navigation items */
+@media (min-width: 48.0625em) {
+  .app-header nav {
+    float: right;
+  }
+
+  .app-header__navigation-item {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 5px 0;
+    border: 0;
+  }
+}
+
+.app-header__navigation-item a {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+@media print {
+  .app-header__navigation-item a {
+    font-family: sans-serif;
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
+.app-header__navigation-item--active a:link,
+.app-header__navigation-item--active a:hover,
+.app-header__navigation-item--active a:visited {
+  color: #0b0c0c;
+}
+
+.app-header__navigation-item--active a:focus {
+  color: #0b0c0c;
+}
+
+.app-header__navigation-item:last-child {
+  margin-right: 0;
+}
+
+@media print {
+  .app-header {
+    border-bottom-width: 0;
+    color: #0b0c0c;
+    background: transparent;
+  }
+
+  .app-header__link:link,
+  .app-header__link:visited {
+    color: #0b0c0c;
+  }
+
+  .app-header__link:after {
+    display: none;
+  }
+}
+
+/* Main style */
+.app-heading--l {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+@media (min-width: 40.0625em) {
+  .app-heading--l {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 1.35;
+    margin-bottom: 35px;
+  }
+}
+
+.app-post p,
+.app-body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+.app-post a:focus,
+.app-link:focus {
+  background-color: #FF8636;
+  outline: 3px solid #FF8636;
+  outline-offset: 0;
+  text-decoration-color: #0b0c0c;
+}
+
+.app-post a,
+.app-link {
+  color: #0098A1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration-color: #ED6F1A;
+}
+
+.app-post a:visited,
+.app-link:visited {
+  color: #0098A1;
+}
+
+.app-post a:hover,
+.app-post a:active,
+.app-link:hover,
+.app-link:active {
+  color: #171819;
+  text-decoration-color: #0b0c0c;
+}
+
+.app-post a:focus,
+.app-link:focus {
+  color: #0098A1;
+}
+
+.app-post a:visited:focus,
+.app-link:visited:focus {
+  color: #0b0c0c;
+}
+
+.app-list {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+.app-list--bullet {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+.app-list--bullet > li {
+  margin-bottom: 5px;
+}
+.app-list--number {
+  padding-left: 20px;
+  list-style-type: decimal;
+}
+.app-list--number > li {
+  margin-bottom: 5px;
+}
+.app-list__inline li {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+/* Blog posts */
+.app-post__link {
+  border-bottom: 1px solid #0098A1;
+  display: block;
+  height: 100%;
+  padding: 15px 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  width: calc(100%-30px);
+}
+.app-post__link:hover,
+.app-post__link:focus {
+  background-color: #eee;
+}
+
+.app-list__post-title,
+.app-list__post-desc {
+  color: #0098A1;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.app-list__post-title {
+  line-height: 1.35;
+  text-decoration: 1px underline solid #ED6F1A;
+}
+.app-post__link:hover .app-list__post-title {
+  color: #0b0c0c;
+  text-decoration-color: #0b0c0c;
+}
+
+.app-list__post-desc {
+  color: #333;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.15;
+}
+
+.app-post__heading {
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.app-body.app-post__meta {
+  color: #333;
+  padding-bottom: 25px;
+  margin-top: -5px;
+  line-height: 1;
+}
+
+/* Footer styles 'borrowed' from GOV.UK */
+.app-footer {
+  background: #fff;
+  color: #454a4c;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.14286;
+  padding-bottom: 25px;
+}
+
+@media print {
+  .app-footer {
+    font-family: sans-serif;
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .app-footer {
+    display: inline;
+    padding-top: 40px;
+    padding-bottom: 25px;
+    position: relative;
+  }
+}
+
+.app-link--footer {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.app-link--footer:link,
+.app-link--footer:visited {
+  color: #454a4c;
+}
+
+.app-link--footer:hover,
+.app-link--footer:active {
+  color: #171819;
+}
+
+.app-link--footer:focus {
+  color: #0b0c0c;
+}
+
+/* Homepage */
+.app-body--home {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.app-list--home {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.31579;
+}
+
+/* Overwrites */
+.app-\!-font-size-20 {
+    font-size: 20px !important;
+    font-size: 1.25rem !important;
 }
