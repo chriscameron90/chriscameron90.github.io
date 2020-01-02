@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My very first post"
+title: "My very first post - Case studies"
 date: 2018-05-03
 description: "Test description"
 ---
