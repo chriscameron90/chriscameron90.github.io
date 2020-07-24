@@ -426,7 +426,7 @@ body {
 
 .app-post a,
 .app-link {
-  color: #0098A1;
+  color: #007E86;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -436,7 +436,7 @@ body {
 
 .app-post a:visited,
 .app-link:visited {
-  color: #0098A1;
+  color: #007E86;
 }
 
 .app-post a:hover,
@@ -449,7 +449,7 @@ body {
 
 .app-post a:focus,
 .app-link:focus {
-  color: #0098A1;
+  color: #007E86;
 }
 
 .app-post a:visited:focus,
@@ -494,7 +494,7 @@ body {
 
 /* Blog posts */
 .app-post__link {
-  border-bottom: 1px solid #0098A1;
+  border-bottom: 1px solid #007E86;
   display: block;
   height: 100%;
   padding: 15px 10px;
@@ -511,7 +511,7 @@ body {
 
 .app-list__post-title,
 .app-list__post-desc {
-  color: #0098A1;
+  color: #007E86;
   display: block;
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
@@ -565,6 +565,17 @@ body {
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 12pt;
   }
+}
+
+/* Bookmarks page styles */
+.app-bookmarks--list li {
+  line-height: 1.25;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.app-bookmarks--author {
+  color: #595959;
 }
 
 /* Footer styles 'borrowed' from GOV.UK */
