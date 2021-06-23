@@ -568,14 +568,37 @@ body {
 }
 
 /* Bookmarks page styles */
-.app-bookmarks--list li {
+.app-bookmarks-list li {
   line-height: 1.25;
   margin-bottom: 15px;
+  position: relative;
   width: 100%;
 }
 
-.app-bookmarks--author {
+.app-bookmarks__link {
+  max-width: 80%;
+  display: block;
+}
+
+.app-bookmarks__author {
   color: #595959;
+}
+
+.app-bookmarks__status-tag {
+  color: #fff;
+  display: block;
+  position: absolute;
+  padding: 5px 10px;
+  top: 0;
+  right: 0;
+}
+
+.app-bookmarks__status-tag--toread {
+  background-color: #2b2b2b;
+}
+
+.app-bookmarks__status-tag--read {
+  background-color: #056b0d;
 }
 
 /* Footer styles 'borrowed' from GOV.UK */
