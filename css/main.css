@@ -799,24 +799,24 @@ body {
 }
 
 /* Overwrites */
-.app-\ !-font-size-20 {
+.app-\!-font-size-20 {
   font-size: 20px !important;
   font-size: 1.25rem !important;
 }
 
 @media print {
-  .app-\ !-font-size-20 {
+  .app-\!-font-size-20 {
     font-size: 11pt !important;
     line-height: 1.15;
     margin-bottom: 0;
   }
 }
 
-.app-\ !-font-weight-normal {
+.app-\!-font-weight-normal {
   font-weight: 400 !important;
 }
 
-.app-\ !-margin-bottom-0 {
+.app-\!-margin-bottom-0 {
   margin-bottom: 0 !important;
 }
 
