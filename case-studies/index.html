@@ -12,6 +12,11 @@ title: Case studies - Christopher Cameron
 				<a class="app-post__link" href="{{ post.url }}" title="{{ post.title }}">
 					<span class="app-list__post-title">{{ post.title }}</span>
 					<span class="app-list__post-desc">{{ post.description }}</span>
+          {% if post.image %}
+          <div class="app-list__post-image">
+          <img width="100%" src="{{ post.image }}" alt="" role="presentation"/>
+          </div>
+          {% endif %}
 				</a>
 			</li>
 			{% endfor %}

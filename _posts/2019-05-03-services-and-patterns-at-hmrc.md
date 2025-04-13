@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Services and patterns at HMRC"
+appendTitle: ' - Christopher Cameron'
 date: 2019-05-03
 description: "Reducing duplication of effort and keeping our services consistent"
+image: "/assets/img/cds-import-step-by-step.png"
 ---
 
 When I started working at HMRC, their new customs services were working independently of each other. This meant that there was a duplication of work and effort, and that meant that inconsistent patterns were being used across these services making the experience more difficult for their users.

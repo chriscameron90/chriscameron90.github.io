@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Customs: Moving to digital"
+appendTitle: ' - Christopher Cameron'
 date: 2019-01-01
 description: "Digital transformation in UK customs. Taking paper to the web"
+image: "/assets/img/customs-financials-certificates-page.png"
 ---
 
 ![Sketch book with low fidelity drawings of screens. Photo](/assets/img/customs-financials-workbook.jpg){:.app-post-image}

@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Self assessment peak 2020"
+appendTitle: ' - Christopher Cameron'
 date: 2019-09-15
 description: "Investigation and recommendations to help reduce contact to HMRC call centers"
+image: "/assets/img/self-assessment-peak-specwork.jpg"
 ---
 
 HMRC has a legislative requirement for people to be able to file their tax returns by a specific date. There are a lot of people who leave this until close to the deadline, resulting in an increase in contact to HMRC call centers, a lot of which are lost or forgotten credentials.  
