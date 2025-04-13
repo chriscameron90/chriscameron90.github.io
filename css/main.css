@@ -309,8 +309,8 @@ b, strong {
 /* Main style */
 .app-heading--l {
   font-family: 'Roboto', sans-serif;
-  font-size: 28px;
-  font-size: 1.75rem;
+  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 25px;
@@ -318,8 +318,6 @@ b, strong {
 
 @media (min-width: 40.0625em) {
   .app-heading--l {
-    font-size: 32px;
-    font-size: 2rem;
     line-height: 1.35;
     margin-bottom: 35px;
   }
@@ -336,8 +334,8 @@ b, strong {
 
 .app-heading--m {
   font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 25px;
@@ -345,8 +343,6 @@ b, strong {
 
 @media (min-width: 40.0625em) {
   .app-heading--m {
-    font-size: 28px;
-    font-size: 1.75rem;
     line-height: 1.35;
     margin-bottom: 35px;
   }
@@ -363,17 +359,15 @@ b, strong {
 
 .app-heading--s {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
   font-weight: 700;
+  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1.15;
   margin-bottom: 25px;
 }
 
 @media (min-width: 40.0625em) {
   .app-heading--s {
-    font-size: 20px;
-    font-size: 1.25rem;
     line-height: 1.35;
     margin-bottom: 35px;
   }
@@ -391,8 +385,8 @@ b, strong {
 
 .app-heading--xs {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 25px;
@@ -400,8 +394,6 @@ b, strong {
 
 @media (min-width: 40.0625em) {
   .app-heading--xs {
-    font-size: 18px;
-    font-size: 1.125rem;
     line-height: 1.25;
     margin-bottom: 35px;
   }
